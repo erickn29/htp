@@ -3,26 +3,15 @@
 {% load static %}
 
 {% block content %}
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt maiores minus rerum voluptas ratione ipsum debitis,
-libero modi quo aspernatur voluptates rem error illum eum, consequuntur quas? Ex repudiandae totam nihil, recusandae
-eius consequuntur officia illo sed ab nostrum facilis ullam labore error perferendis nulla voluptatem voluptate, aut
-necessitatibus nesciunt eum commodi impedit soluta eaque. Optio sunt illo ab laboriosam suscipit dolorum atque beatae
-aut. Quam, quasi aut amet numquam, suscipit et facere optio vel, ut in placeat! Mollitia rerum eligendi esse placeat
-facilis non dicta nulla modi excepturi sit at, recusandae ut maiores beatae sequi eum est ducimus praesentium?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere optio enim amet explicabo et doloremque, temporibus ad
-officia aspernatur fuga ea nisi sint dicta vero provident! Harum consequatur veritatis fugit veniam accusamus ut
-reprehenderit maxime animi unde cum fuga quae quasi quos tempore, nam autem voluptatibus esse? Laboriosam voluptates
-eligendi voluptatum molestiae ullam eos sapiente ad, eaque dignissimos aspernatur fugit deleniti, animi blanditiis
-praesentium maxime, expedita similique excepturi! Optio omnis voluptatum eligendi eveniet suscipit voluptates
-aspernatur, neque ut necessitatibus, mollitia, eaque atque quos veritatis adipisci ducimus odit facere quod.
-Necessitatibus nostrum vero architecto vitae qui aperiam eligendi eos maxime, nobis mollitia culpa, autem optio unde
-ducimus modi molestias labore iure! Velit sequi maiores fuga id molestias? Odit pariatur unde ipsam aspernatur. Facere
-doloremque veritatis repellat aperiam. Provident voluptate quia ipsa distinctio magnam quidem nam atque omnis
-necessitatibus harum at, amet nostrum illum eligendi sapiente accusantium officia similique earum dicta odio voluptatum
-esse reprehenderit! Neque distinctio animi, alias quia, numquam aspernatur perferendis voluptatum dolor hic corrupti
-error tempore illo dicta qui mollitia quam ipsa sed aliquam veniam commodi a? Nemo ratione dolor sapiente quidem,
-ducimus illo praesentium similique expedita, possimus veritatis dolorum quo nam natus tenetur, perferendis recusandae?
-Omnis, vel ab.
+<article id="artcl"></article>
+<h1>Это тайтл</h1>
+<h2>Подзаголовок Python</h2>
+Какой-то текст<br>
+Есть альтернативный способ, при котором файлы со шрифтами хранятся вместе с остальными ресурсами сайта. Для них принято заводить отдельную директорию в корне проекта — например, fonts. В неё следует поместить файлы для каждого начертания в нужных форматах — в большинстве случаев, если не требуется поддержка старых браузеров, подойдут .woff и .woff2, о которых мы говорили ранее. Шрифты можно скачать на различных ресурсах. При этом всегда нужно обращать внимание на лицензию — некоторые шрифты могут быть недоступны для коммерческого использования.
+<img src="{% static 'img/1.jpg' %}" alt="какой-то текст" srcset="">
+Но чаще дизайн макета не позволяет обойтись веб-безопасным шрифтом, а требует использовать какой-то нестандартный. Тогда файл со шрифтом нужно подгружать с сервера по той же схеме, что и остальные ресурсы — CSS-файлы, изображения и так далее. Он может весить довольно много, поэтому для быстрой загрузки страницы выгоднее сначала рассмотреть использование стандартных шрифтов. Но даже с нестандартными шрифтами можно избежать большинства проблем, если уделить внимание оптимизации.
+<br><br>
+Для начала стоит выбрать правильный формат шрифта. TTF и OTF — форматы, которые предоставляются с минимальным сжатием или совсем без него. Их стоит использовать только в том случае, если нужна поддержка очень старых браузеров. Во всех остальных ситуациях можно выбрать WOFF и WOFF2 — форматы, которые отличаются высокой степенью сжатия. WOFF2 — усовершенствованная версия предшественника, этот формат можно считать лучшим из существующих. Тем не менее, поддержка WOFF2 хотя и очень хорошая, но пока не абсолютная, поэтому в качестве подстраховки для не самых современных браузеров стоит использовать WOFF. <br><br>
 <pre><code>
 from django.shortcuts import render
 from django.shortcuts import redirect
@@ -30,26 +19,7 @@ from django.shortcuts import redirect
 def index(request):
     return render(request, 'htp_app/index.html', context={})
 </code></pre>
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt maiores minus rerum voluptas ratione ipsum debitis,
-libero modi quo aspernatur voluptates rem error illum eum, consequuntur quas? Ex repudiandae totam nihil, recusandae
-eius consequuntur officia illo sed ab nostrum facilis ullam labore error perferendis nulla voluptatem voluptate, aut
-necessitatibus nesciunt eum commodi impedit soluta eaque. Optio sunt illo ab laboriosam suscipit dolorum atque beatae
-aut. Quam, quasi aut amet numquam, suscipit et facere optio vel, ut in placeat! Mollitia rerum eligendi esse placeat
-facilis non dicta nulla modi excepturi sit at, recusandae ut maiores beatae sequi eum est ducimus praesentium?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere optio enim amet explicabo et doloremque, temporibus ad
-officia aspernatur fuga ea nisi sint dicta vero provident! Harum consequatur veritatis fugit veniam accusamus ut
-reprehenderit maxime animi unde cum fuga quae quasi quos tempore, nam autem voluptatibus esse? Laboriosam voluptates
-eligendi voluptatum molestiae ullam eos sapiente ad, eaque dignissimos aspernatur fugit deleniti, animi blanditiis
-praesentium maxime, expedita similique excepturi! Optio omnis voluptatum eligendi eveniet suscipit voluptates
-aspernatur, neque ut necessitatibus, mollitia, eaque atque quos veritatis adipisci ducimus odit facere quod.
-Necessitatibus nostrum vero architecto vitae qui aperiam eligendi eos maxime, nobis mollitia culpa, autem optio unde
-ducimus modi molestias labore iure! Velit sequi maiores fuga id molestias? Odit pariatur unde ipsam aspernatur. Facere
-doloremque veritatis repellat aperiam. Provident voluptate quia ipsa distinctio magnam quidem nam atque omnis
-necessitatibus harum at, amet nostrum illum eligendi sapiente accusantium officia similique earum dicta odio voluptatum
-esse reprehenderit! Neque distinctio animi, alias quia, numquam aspernatur perferendis voluptatum dolor hic corrupti
-error tempore illo dicta qui mollitia quam ipsa sed aliquam veniam commodi a? Nemo ratione dolor sapiente quidem,
-ducimus illo praesentium similique expedita, possimus veritatis dolorum quo nam natus tenetur, perferendis recusandae?
-Omnis, vel ab.
+Для начала стоит выбрать правильный формат шрифта. TTF и OTF — форматы, которые предоставляются с минимальным сжатием или совсем без него. Их стоит использовать только в том случае, если нужна поддержка очень старых браузеров. Во всех остальных ситуациях можно выбрать WOFF и WOFF2 — форматы, которые отличаются высокой степенью сжатия. WOFF2 — усовершенствованная версия предшественника, этот формат можно считать лучшим из существующих. Тем не менее, поддержка WOFF2 хотя и очень хорошая, но пока не абсолютная, поэтому в качестве подстраховки для не самых современных браузеров стоит использовать WOFF. 
 {% endblock %}
 
 {% block left %}
@@ -59,6 +29,8 @@ LEFT CONTENT
 <div class="left-menu-sticky">
 STICKY
 </div>
+
+<script src="{% static 'js/scroll.js' %}"></script>
 {% endblock %}
 
 

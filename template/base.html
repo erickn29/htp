@@ -12,10 +12,9 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="{% static 'js/pop.js' %}"></script>
     <script src="{% static 'js/highlight.min.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/white.css' %}">
-    <link rel="stylesheet" href="{% static 'css/hljs/onedark.min.css' %}">
+    <link id="css-theme" rel="stylesheet" href="{% static 'css/white.css' %}">
+    <link id="code-theme" rel="stylesheet" href="{% static 'css/hljs/default.min.css' %}">
     <script>hljs.highlightAll();</script>
     <title>HTP</title>
 </head>
@@ -31,45 +30,15 @@
                 {% block left %}
                 {% endblock %}
             </div>
-            <div class="content col-md-9">
+            <div class="content col-md-8">
                 {% block content %}
                 {% endblock %}
-
             </div>
         </div>
-
     </div>
 
-    <div class="left-content" id="l-content">
-        LEFT CONTENT <br>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quas unde laborum, ipsum nisi dolorum!
-        Exercitationem eaque reiciendis fugit a placeat beatae quibusdam aperiam, qui aut, ut laudantium obcaecati eum?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quas unde laborum, ipsum nisi dolorum!
-        Exercitationem eaque reiciendis fugit a placeat beatae quibusdam aperiam, qui aut, ut laudantium obcaecati eum?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quas unde laborum, ipsum nisi dolorum!
-        Exercitationem eaque reiciendis fugit a placeat beatae quibusdam aperiam, qui aut, ut laudantium obcaecati eum?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quas unde laborum, ipsum nisi dolorum!
-        Exercitationem eaque reiciendis fugit a placeat beatae quibusdam aperiam, qui aut, ut laudantium obcaecati eum?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quas unde laborum, ipsum nisi dolorum!
-        Exercitationem eaque reiciendis fugit a placeat beatae quibusdam aperiam, qui aut, ut laudantium obcaecati eum?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quas unde laborum, ipsum nisi dolorum!
-        Exercitationem eaque reiciendis fugit a placeat beatae quibusdam aperiam, qui aut, ut laudantium obcaecati eum?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quas unde laborum, ipsum nisi dolorum!
-        Exercitationem eaque reiciendis fugit a placeat beatae quibusdam aperiam, qui aut, ut laudantium obcaecati eum?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quas unde laborum, ipsum nisi dolorum!
-        Exercitationem eaque reiciendis fugit a placeat beatae quibusdam aperiam, qui aut, ut laudantium obcaecati eum?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quas unde laborum, ipsum nisi dolorum!
-        Exercitationem eaque reiciendis fugit a placeat beatae quibusdam aperiam, qui aut, ut laudantium obcaecati eum?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quas unde laborum, ipsum nisi dolorum!
-        Exercitationem eaque reiciendis fugit a placeat beatae quibusdam aperiam, qui aut, ut laudantium obcaecati eum?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quas unde laborum, ipsum nisi dolorum!
-        Exercitationem eaque reiciendis fugit a placeat beatae quibusdam aperiam, qui aut, ut laudantium obcaecati eum?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quas unde laborum, ipsum nisi dolorum!
-        Exercitationem eaque reiciendis fugit a placeat beatae quibusdam aperiam, qui aut, ut laudantium obcaecati eum?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quas unde laborum, ipsum nisi dolorum!
-        Exercitationem eaque reiciendis fugit a placeat beatae quibusdam aperiam, qui aut, ut laudantium obcaecati eum?
-        <br>
-        END
+    <div class="left-slider" id="l-content">
+        LEFT CONTENT
     </div>
 
     <div class="menu-bottom">
@@ -81,11 +50,11 @@
         </div>
     </a>
 
-    <div id="upper"><a href="#"><img src="{% static 'img\chevron-up.svg' %}" alt="left-menu" srcset=""></a></div>
+    <div id="upper"><a href="#"><img src="{% static 'img\up.png' %}" alt="left-menu" srcset=""></a></div>
     
     <footer class="mt-auto">
     </footer>
 
 </body>
-
+<script src="{% static 'js/pop.js' %}"></script>
 </html>
