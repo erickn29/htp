@@ -46,7 +46,7 @@
 body {
     background-color: rgb(24 27 30);
     color: #a6b3bd;
-    font-size: 16px;
+    font-size: 1.1rem;
     font-family: 'SF UI Display Regular'
 }
 
@@ -269,44 +269,39 @@ pre {
 .nav-link{
     font-family: 'SF UI Display Bold';
     color: #6b7da1 !important;
-    font-size: 20px;
-    transition: .3s;
+    font-size: 1.1rem;
     list-style: none;
 }
 
 .nav-link:hover{
     color: #6b7da1 !important;
-    transition: .3s;
 }
 
 .navbar-brand{
     font-family: 'SF UI Display Heavy';
-    font-size: 20px !important;
+    font-size: 1.1rem !important;
     background-color: #6b7da1 !important;
     border-radius: 8px;
     padding-left: 0.3125rem;
     padding-right: 0.3125rem;
     color: #1e2226 !important;
-    transition: .3s;
 }
 
 .navbar-brand:hover{
     background-color: #617191 !important;
-    transition: .3s;
 }
 
 #login{
     padding-left: 0;
 }
 
-#them-toggler{
+#theme-toggler{
     cursor: pointer;
     opacity: .7;
-    transition: .3s;
+    height:22px
 }
 
-#them-toggler:hover{
+#theme-toggler:hover{
     cursor: pointer;
     opacity: 1;
-    transition: .3s;
 }
