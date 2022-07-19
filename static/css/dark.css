@@ -100,13 +100,19 @@ h2{
 .bottom-item img{
     height: 50px;
     display: inline;
-    padding: 10px;
+    padding: 12px;
+}
+
+#burger{
+    height: 28px;
+    display: inline;
 }
 
 .bottom-row {
     justify-content: space-between;
     text-align: center;
     align-content: center;
+    background-color: #1e2226;
 }
 
 @media screen and (max-width: 590px) {

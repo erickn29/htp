@@ -10,15 +10,3 @@ function pop(){
     }
     
 }
-
-$('#them-toggler').click(function(){
-    if ($('#css-theme').attr('href') == "static/css/dark.css"){
-        $('#css-theme').attr("href", "static/css/white.css")
-        $('#code-theme').attr("href", "static/css/hljs/default.min.css")
-
-    }else{
-        $('#css-theme').attr("href", "static/css/dark.css")
-        $('#code-theme').attr("href", "static/css/hljs/onedark.min.css")
-    }
-    
-})
