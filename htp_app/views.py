@@ -4,7 +4,10 @@ from django.shortcuts import redirect
 
 
 def index(request):
-    theme = request.COOKIES['theme']
+    if request.COOKIES.get('theme'):
+        theme = request.COOKIES['theme']
+    else:
+        theme = '/static/css/white.css'
     return render(request, 'htp_app/index.html', context={'theme': theme})
 
 
