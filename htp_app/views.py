@@ -20,6 +20,7 @@ def index(request):
         map_ = '/static/img/map-white.png'
         like = '/static/img/social-white.png'
         up = '/static/img/angle-up-white.png'
+    test = 'BLABLABLA'
     context = {
         'theme': theme,
         'code_theme': code_theme,
@@ -28,6 +29,7 @@ def index(request):
         'map': map_,
         'like': like,
         'up': up,
+        'test': test
     }
     return render(request, 'htp_app/index.html', context=context)
 
