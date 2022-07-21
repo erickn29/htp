@@ -4,7 +4,7 @@ from django.shortcuts import redirect
 
 
 def index(request):
-    if len(request.COOKIES) == 7:
+    if len(request.COOKIES) >= 7:
         theme = request.COOKIES['theme']
         code_theme = request.COOKIES['code_theme']
         burger = request.COOKIES['burger']

@@ -269,13 +269,13 @@ pre {
     font-family: 'SF UI Display Bold';
     color: #454545 !important;
     font-size: 1.1rem;
-    transition: .3s;
+    /* transition: .3s; */
     list-style: none;
 }
 
 .nav-link:hover{
     color: #275a9b !important;
-    transition: .3s;
+    /* transition: .3s; */
 }
 
 .navbar-brand{
@@ -286,12 +286,12 @@ pre {
     padding-left: 0.3125rem;
     padding-right: 0.3125rem;
     color: #ffffff !important;
-    transition: .3s;
+    /* transition: .3s; */
 }
 
 .navbar-brand:hover{
     background-color: #2f6bba !important;
-    transition: .3s;
+    /* transition: .3s; */
 }
 
 #login{
@@ -301,12 +301,12 @@ pre {
 #theme-toggler{
     cursor: pointer;
     opacity: .9;
-    transition: .3s;
+    /* transition: .3s; */
     height:22px
 }
 
 #theme-toggler:hover{
     cursor: pointer;
     opacity: 1;
-    transition: .3s;
+    /* transition: .3s; */
 }
