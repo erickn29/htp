@@ -125,7 +125,6 @@ h2{
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     font-family: 'SF UI Display Regular';
-    font-size: 18px;
 }
 
 @media screen and (max-width: 590px) {
