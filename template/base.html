@@ -28,19 +28,16 @@
     {% include 'includes/navbar.html' %}
     <div class="container">
         <div class="row">
-            <div class="left col-md-3">
-                {% block left %}
-                {% endblock %}
-            </div>
             <div class="content col-md-8">
                 {% block content %}
                 {% endblock %}
             </div>
+            <div class="right col-md-3">
+                {% block right %}
+                {% endblock %}
+            </div>
         </div>
     </div>
-
-    <!-- <div class="left-slider" id="l-content">
-    </div> -->
 
     <div class="menu-bottom">
         {% include 'includes/bottom-menu.html' %}
