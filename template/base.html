@@ -4,7 +4,6 @@
 <html lang="en">
 
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -14,8 +13,9 @@
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="{% static 'js/highlight.min.js' %}"></script>
-    <link id="css-theme" rel="stylesheet" href={{theme}}>
+    <link id="css-theme" rel="stylesheet" href="{{theme}}">
     <link id="code-theme" rel="stylesheet" href={{code_theme}}>
+    <link rel="shortcut icon" href="{% static 'img/fav.png' %}" type="image/x-icon">
     <script src="{% static 'js/localstorage.js' %}"></script>
     <script>hljs.highlightAll();</script>
     <title>HTP</title>
@@ -33,15 +33,18 @@
                 {% endblock %}
             </div>
             <div class="right col-md-3">
-                {% block right %}
-                {% endblock %}
+                <div class="left-menu" id="left-slide">
+                    {% block right %}
+                    {% endblock %}
+                </div>
+                <div class="left-menu-sticky">
+                    STICKY
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="menu-bottom">
-        {% include 'includes/bottom-menu.html' %}
-    </div>
+    
 
     <a href="#">
         <div class="up-arrow">
@@ -50,6 +53,10 @@
 
     <div id="upper"><a href="#"><img src="{% static 'img\up.png' %}" alt="left-menu" srcset=""></a></div>
     
+    <div class="menu-bottom">
+        {% include 'includes/bottom-menu.html' %}
+    </div>
+    
     <footer class="mt-auto">
     </footer>
 
@@ -57,4 +64,5 @@
 <script src="{% static 'js/pop.js' %}"></script>
 <script src="{% static 'js/themes.js' %}"></script>
 <script src="{% static 'js/left-slide.js' %}"></script>
+<script src="{% static 'js/scroll.js' %}"></script>
 </html>
