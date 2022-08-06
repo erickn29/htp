@@ -2,15 +2,37 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from pytils.translit import slugify
 
 
 class Tag(models.Model):
     name = models.CharField(max_length=256)
+    slug = models.SlugField(null=True)
+
+    class Meta:
+        verbose_name = 'Тэги'
+
+    def __str__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Tag, self).save(*args, **kwargs)
 
 
 class Category(models.Model):
     name = models.CharField(max_length=256)
-    slug = models.SlugField(max_length=256)
+    slug = models.SlugField(max_length=256, null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Категории'
+
+    def __str__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Category, self).save(*args, **kwargs)
 
 
 class Account(models.Model):
@@ -18,6 +40,9 @@ class Account(models.Model):
     avatar = models.URLField(null=True)
     registration_date = models.DateField(auto_now=True)
     rating = models.IntegerField(null=True)
+
+    def __str__(self):
+        return self.user.username
 
 
 @receiver(post_save, sender=User)
@@ -34,12 +59,22 @@ def save_user_profile(sender, instance, **kwargs):
 class Article(models.Model):
     title = models.CharField(max_length=512, blank=False)
     text = models.TextField(blank=False)
-    slug = models.SlugField(max_length=512)
+    slug = models.SlugField(max_length=512, null=True, blank=True)
     datetime = models.DateTimeField(auto_now=True)
-    views = models.IntegerField(null=True)
+    views = models.IntegerField(null=True, blank=True)
     author = models.ForeignKey(Account, on_delete=models.CASCADE, related_name='author')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='category')
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Статьи'
+
+    def __str__(self):
+        return self.title
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Article, self).save(*args, **kwargs)
 
 
 class Comment(models.Model):
@@ -47,4 +82,10 @@ class Comment(models.Model):
     datetime = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(Account, on_delete=models.CASCADE)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'Комменты'
+
+    def __str__(self):
+        return self.author
 
