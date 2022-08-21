@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from pytils.translit import slugify
+from django.urls import reverse
 
 
 class Tag(models.Model):
@@ -22,7 +23,7 @@ class Tag(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=256)
-    slug = models.SlugField(max_length=256, null=True, blank=True)
+    slug = models.CharField(max_length=256, null=True, blank=True)
 
     class Meta:
         verbose_name = 'Категории'
@@ -68,6 +69,9 @@ class Article(models.Model):
 
     class Meta:
         verbose_name = 'Статьи'
+
+    def get_url(self):
+        return reverse('article', args=[self.category__slug, self.slug])
 
     def __str__(self):
         return self.title

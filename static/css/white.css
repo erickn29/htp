@@ -47,7 +47,7 @@ body {
     background-color: rgb(222 222 222);
     color: #454545;
     font-size: 1.1rem;
-    font-family: 'SF UI Display Regular'
+    font-family: 'SF UI Display Regular';
 }
 
 h1{
@@ -152,9 +152,9 @@ h2{
 
 footer {
     background-color: rgb(46, 46, 46);
-    z-index: 5;
     padding: 20px 20px;
     color:#d5d5d5;
+    z-index: 5;
 }
 
 footer a{
