@@ -1,9 +1,11 @@
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from pytils.translit import slugify
 from django.urls import reverse
+from ckeditor.fields import RichTextField
 
 
 class Tag(models.Model):
@@ -59,7 +61,7 @@ def save_user_profile(sender, instance, **kwargs):
 
 class Article(models.Model):
     title = models.CharField(max_length=512, blank=False)
-    text = models.TextField(blank=False)
+    text = RichTextUploadingField()
     slug = models.SlugField(max_length=512, null=True, blank=True)
     datetime = models.DateTimeField(auto_now=True)
     views = models.IntegerField(null=True, blank=True)

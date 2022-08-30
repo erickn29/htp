@@ -50,6 +50,16 @@ body {
     font-family: 'SF UI Display Regular';
 }
 
+a {
+    color: #75ff008c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #75ff00 !important;
+    text-decoration: none;
+}
+
 h1{
     font-family: 'SF UI Display Heavy';
     color: #6b7ea2;
@@ -279,21 +289,19 @@ pre {
 
 .nav-link{
     font-family: 'SF UI Display Bold';
-    color: #6b7da1 !important;
+    color: #75ff0069 !important;
     font-size: 1.1rem;
     list-style: none;
 }
 
 .nav-link:hover{
-    color: #0a86af !important;
+    color: #75ff00 !important;
 }
 
 .navbar-brand{
     font-family: 'SF UI Display Heavy';
     font-size: 1.1rem !important;
-    background: -webkit-linear-gradient(45deg,#7000c5, #0095ad) !important;
-    background: -moz-linear-gradient(45deg,#7000c5, #0095ad) !important;
-    background: -o-linear-gradient(45deg,#7000c5, #0095ad) !important;
+    background-color: #75ff0069 !important;
     border-radius: 8px;
     padding-left: 0.3125rem;
     padding-right: 0.3125rem;
@@ -301,7 +309,8 @@ pre {
 }
 
 .navbar-brand:hover{
-    background-color: #617191 !important;
+    background-color: #75ff00 !important;
+    color: #1e2226 !important;
 }
 
 #login{

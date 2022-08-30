@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views, cookies
 from .views import *
 
@@ -11,5 +11,6 @@ urlpatterns = [
     path('forum/', views.forum, name='forum'),
     path('<slug:category>/<slug:article>/', ArticleDetailView.as_view(), name='article'),
     path('set_cookie', cookies.set_cookie),
+
 ]
 
