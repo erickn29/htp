@@ -62,12 +62,13 @@ def save_user_profile(sender, instance, **kwargs):
 class Article(models.Model):
     title = models.CharField(max_length=512, blank=False)
     text = RichTextUploadingField()
+    poster = RichTextUploadingField()
     slug = models.SlugField(max_length=512, null=True, blank=True)
     datetime = models.DateTimeField(auto_now=True)
     views = models.IntegerField(null=True, blank=True)
     author = models.ForeignKey(Account, on_delete=models.CASCADE, related_name='author')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='category')
-    tags = models.ManyToManyField(Tag, null=True, blank=True)
+    tags = models.ManyToManyField(Tag, null=True, blank=True, related_name='Tags')
 
     class Meta:
         verbose_name = 'Статьи'

@@ -51,23 +51,23 @@ body {
 }
 
 a {
-    color: #75ff008c;
+    color: #82898f;
     text-decoration: none;
 }
 
 a:hover {
-    color: #75ff00 !important;
+    color: #50adefbf !important;
     text-decoration: none;
 }
 
 h1{
     font-family: 'SF UI Display Heavy';
-    color: #6b7ea2;
+    color: #82898f;
 }
 
 h2{
     font-family: 'SF UI Display Bold';
-    color: #6b7ea2;
+    color: #82898f;
 }
 
 .cover{
@@ -289,19 +289,21 @@ pre {
 
 .nav-link{
     font-family: 'SF UI Display Bold';
-    color: #75ff0069 !important;
+    color: #82898f !important;
     font-size: 1.1rem;
     list-style: none;
 }
 
 .nav-link:hover{
-    color: #75ff00 !important;
+    color: #50adefbf !important;
 }
 
 .navbar-brand{
     font-family: 'SF UI Display Heavy';
     font-size: 1.1rem !important;
-    background-color: #75ff0069 !important;
+    background: -webkit-linear-gradient(45deg,#7000c5, #0095ad) !important;
+    background: -moz-linear-gradient(45deg,#7000c5, #0095ad) !important;
+    background: -o-linear-gradient(45deg,#7000c5, #0095ad) !important;
     border-radius: 8px;
     padding-left: 0.3125rem;
     padding-right: 0.3125rem;
@@ -326,4 +328,17 @@ pre {
 #theme-toggler:hover{
     cursor: pointer;
     opacity: 1;
+}
+
+.picture {
+    opacity: .5;
+}
+
+.list-title{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.list-date{
+    font-size: .8rem;
 }

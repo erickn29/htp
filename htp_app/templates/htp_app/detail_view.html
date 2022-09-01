@@ -4,7 +4,8 @@
 
 {% block content %}
 
-    {{ article.title }}<br>
+    <h1>{{ article.title }}</h1>
+    {{ article.poster|safe }}
     {{ article.text|safe }}
 
 {% endblock %}

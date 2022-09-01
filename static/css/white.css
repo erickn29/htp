@@ -322,3 +322,12 @@ pre {
     opacity: 1;
     /* transition: .3s; */
 }
+
+.list-title{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.list-date{
+    font-size: .8rem;
+}
