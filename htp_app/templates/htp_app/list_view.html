@@ -5,12 +5,18 @@
 {% block content %}
 
     {% for article in all_articles %}
-        <a href="{% url 'article' article.category.slug article.slug %}"><span class="list-title">{{ article }}</span></a><br>
-        <span class="list-date">{{ article.datetime }}</span>
-        <a href="{% url 'article' article.category.slug article.slug %}">{{ article.poster|safe }}</a>
-        {% for tag in article_tags_all %}
-            {{ tag }}
-        {% endfor %}
+        
+        <div class="article-item">
+            <a href="{% url 'article' article.category.slug article.slug %}"><span class="list-title">{{ article }}</span></a><br>
+            <span class="list-date">{{ article.datetime }}</span>
+
+            {% for tag in article.tags.all %}
+                <a href="{% url 'tags' tag.slug %}"><span class="list_tags">#{{ tag }}</span></a>
+            {% endfor %}
+            
+            <a href="{% url 'article' article.category.slug article.slug %}">{{ article.poster|safe }}</a>
+        </div>
+
     {% endfor %}
 
 {% endblock %}

@@ -339,6 +339,14 @@ pre {
     font-weight: bold;
 }
 
-.list-date{
+.list-date, .list_tags{
     font-size: .8rem;
+}
+
+.list_tags {
+    color:#0095ad;
+}
+
+.article-item{
+    margin-bottom: 40px;
 }

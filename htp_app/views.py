@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import get_object_or_404
 from .cookies import cookie_to_template
 from django.views.generic import ListView, DetailView
 from .models import *
@@ -55,47 +55,7 @@ class CheatsheetListView(AllArticlesListView):
     queryset = Article.objects.all().filter(category__name='Cheatsheets')
 
 
-def documentation(request):
-    context = {
-        'test': 'doc page'
-    }
-    cookies = cookie_to_template(request)
-    context.update(cookies)
-    return render(request, 'htp_app/documentation.html', context)
-
-
-def libraries(request):
-    context = {
-        'test': 'lib page'
-    }
-    cookies = cookie_to_template(request)
-    context.update(cookies)
-    return render(request, 'htp_app/libraries.html', context)
-
-
-def cheatsheets(request):
-    context = {
-        'test': 'cheat page'
-    }
-    cookies = cookie_to_template(request)
-    context.update(cookies)
-    return render(request, 'htp_app/cheatsheets.html', context)
-
-
-def interview(request):
-    context = {
-        'test': 'int page'
-    }
-    cookies = cookie_to_template(request)
-    context.update(cookies)
-    return render(request, 'htp_app/interview.html', context)
-
-
-def forum(request):
-    context = {
-        'test': 'forum page'
-    }
-    cookies = cookie_to_template(request)
-    context.update(cookies)
-    return render(request, 'htp_app/forum.html', context)
-
+class TagsListView(AllArticlesListView):
+    def get_queryset(self):
+        tag_slug = self.kwargs['tag']
+        return Article.objects.filter(tags__slug=tag_slug)

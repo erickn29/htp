@@ -5,8 +5,10 @@
 {% block content %}
 
     <h1>{{ article.title }}</h1>
-    {{ article.poster|safe }}
     {{ article.text|safe }}
+    {% for tag in article.tags.all %}
+        <span class="list-date">#{{ tag }}</span>
+    {% endfor %}
 
 {% endblock %}
 

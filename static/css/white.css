@@ -50,6 +50,10 @@ body {
     font-family: 'SF UI Display Regular';
 }
 
+a {
+    text-decoration: none;
+}
+
 h1{
     font-family: 'SF UI Display Heavy';
 }
@@ -326,8 +330,18 @@ pre {
 .list-title{
     font-size: 1.25rem;
     font-weight: bold;
+    text-decoration: none;
+    color:#454545
 }
 
-.list-date{
+.list-date, .list_tags{
     font-size: .8rem;
+}
+
+.list_tags {
+    color:#7000c5;
+}
+
+.article-item{
+    margin-bottom: 40px;
 }
