@@ -140,7 +140,7 @@ CKEDITOR_CONFIGS = {
         'skin': 'moono',
         # 'skin': 'office2013',
         'toolbar_Basic': [
-            ['Source', '-', 'Bold', 'Italic']
+            ['Source', '-', 'Bold', 'Italic', 'codeSnippet']
         ],
         'toolbar_YourCustomToolbarConfig': [
             {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},
@@ -151,7 +151,7 @@ CKEDITOR_CONFIGS = {
                        'HiddenField']},
             '/',
             {'name': 'basicstyles',
-             'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
+             'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat', 'codeSnippet']},
             {'name': 'paragraph',
              'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-',
                        'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl',
@@ -169,6 +169,7 @@ CKEDITOR_CONFIGS = {
                 # put the name of your editor.ui.addButton here
                 'Preview',
                 'Maximize',
+                'CodeSnippet'
 
             ]},
         ],
@@ -184,6 +185,7 @@ CKEDITOR_CONFIGS = {
         'extraPlugins': ','.join([
             'uploadimage', # the upload image feature
             # your extra plugins here
+            'codesnippet',
             'div',
             'autolink',
             'autoembed',
@@ -197,5 +199,12 @@ CKEDITOR_CONFIGS = {
             'dialogui',
             'elementspath'
         ]),
+    },
+    'special': {
+        'toolbar': 'Special',
+        'toolbar_Special': [
+            ['codeSnippet']
+        ],
+        'extraPlugins': 'codesnippet'
     }
 }

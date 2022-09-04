@@ -60,6 +60,7 @@ h1{
 
 h2{
     font-family: 'SF UI Display Bold';
+    line-height: 2;
 }
 
 .cover{
@@ -69,7 +70,7 @@ h2{
     height: 100vh;
     transition: 0.4s;
     display: none;
-    }
+}
 
 .bg-light {
     background-color: #ffffff!important;
@@ -144,15 +145,6 @@ h2{
     border-radius: 5px;
 }
 
-.left-menu-sticky{
-    width: 100%;
-    height: 200px;
-    border-radius: 0.3rem;
-    padding: 15px;
-    background-color: rgb(255 255 255);
-    position: sticky;
-    top: 75px;
-}
 
 footer {
     background-color: rgb(46, 46, 46);
@@ -203,6 +195,18 @@ footer ul{
     position: fixed;
     transition: left .4s
 }
+
+.left-menu-sticky{
+    width: 100%;
+    border-radius: 0.3rem;
+    padding: 15px;
+    background-color: rgb(255 255 255);
+    position: sticky;
+    top: 75px;
+    font-size: .9rem;
+    line-height: 2;
+}
+
 
 @media screen and (max-width: 590px) {
     .up-arrow {

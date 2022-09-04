@@ -30,8 +30,8 @@ def cookie_to_template(req):
         like = req.COOKIES['like']
         up = req.COOKIES['up']
     else:
-        theme = '/static/css/white.css'
-        code_theme = '/static/css/hljs/default.min.css'
+        theme = '/static/css/dark.css'
+        code_theme = '/static/css/hljs/onedark.min.css'
         burger = '/static/img/menu-burger-white.png'
         toggler = '/static/img/moon.png'
         map_ = '/static/img/map-white.png'

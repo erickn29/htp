@@ -5,9 +5,10 @@
 {% block content %}
 
     <h1>{{ article.title }}</h1>
+    <div style="width: 100%;text-align: right;margin-bottom: 8px;" class="list-date">{{ article.datetime }}</div>
     {{ article.text|safe }}
     {% for tag in article.tags.all %}
-        <span class="list-date">#{{ tag }}</span>
+        <a href="{% url 'tags' tag.slug %}"><span class="list_tags">#{{ tag }}</span></a>
     {% endfor %}
 
 {% endblock %}
