@@ -1,7 +1,7 @@
 $(document).ready(function(){
     let headerId = 'nav-id'
     let counter = 0
-    let menu = $('.left-menu-sticky')
+    let menu = $('.menu-toggle')
     let headers = $('.content').find('h2')
     headers.each(function(){
         $(this).attr('id', `${headerId}-${counter}`)
@@ -10,7 +10,7 @@ $(document).ready(function(){
     let list = []
     let add = function(){
         headers.each(function(){
-            list.push(`<a href="#${$(this).attr('id')}">${$(this).html()}</a><br>`)
+            list.push(`<div class="right-link"><a href="#${$(this).attr('id')}">${$(this).html()}</a></div>`)
         })
     }
     add()

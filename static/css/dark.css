@@ -93,6 +93,7 @@ h2{
     .menu-bottom {
         display: none;
     }
+    
 }
 
 .menu-bottom {
@@ -138,11 +139,12 @@ h2{
     background-color: rgb(30 34 38);
     border-radius: 5px;
     font-family: 'SF UI Display Regular';
+    margin-bottom: 15px;
 }
 
 @media screen and (max-width: 590px) {
-    .left-menu-sticky {
-        display: none;
+    h2 {
+        line-height: 1.3;
     }
 }
 
@@ -153,7 +155,28 @@ h2{
     border-radius: 5px;
 }
 
-.left-menu-sticky{
+.right-menu{
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    background-color: rgb(30 34 38);
+    margin-bottom: 17px;
+    border-radius: 0.3rem;
+}
+
+.left-slider {
+    overflow-y: auto;
+    padding: 10px;
+    width: 300px;
+    left: -300px;
+    top: 53px;
+    height: 90vh;
+    background-color: rgb(30 34 38);
+    position: fixed;
+    transition: left .4s
+}
+
+.right-menu-sticky{
     width: 100%;
     border-radius: 0.3rem;
     padding: 15px;
@@ -161,17 +184,26 @@ h2{
     position: sticky;
     top: 75px;
     font-size: .9rem;
-    line-height: 2;
 }
 
-.left-menu-sticky a{
+.menu-toggle a{
+    color:#0095ad;
+    line-height: 1.5;
+}
+
+.right-link{
+    padding: 5px 0;
+    border-bottom: 1px solid #303030;
+}
+
+/* .right-menu-sticky a, .left-slider a{
     color:#0095ad;
     text-decoration: dashed !important;
 }
 
-.left-menu-sticky a:hover{
+.right-menu-sticky a, .left-slider a:hover{
     color:#7000c5 !important;
-}
+} */
 
 footer {
     background-color: rgb(30 34 38);
@@ -200,27 +232,6 @@ footer ul{
     text-decoration: none;
     outline: 0;
     box-shadow: 0 0 0 !important;
-}
-
-.left-menu{
-    width: 100%;
-    height: 200px;
-    padding: 15px;
-    background-color: rgb(30 34 38);
-    margin-bottom: 17px;
-    border-radius: 0.3rem;
-}
-
-.left-slider {
-    overflow-y: auto;
-    padding: 10px;
-    width: 300px;
-    left: -300px;
-    top: 53px;
-    height: 90vh;
-    background-color: rgb(30 34 38);
-    position: fixed;
-    transition: left .4s
 }
 
 @media screen and (max-width: 590px) {
