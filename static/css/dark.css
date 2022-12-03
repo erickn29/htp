@@ -50,6 +50,16 @@ body {
     font-family: 'SF UI Display Regular';
 }
 
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: #1e2226;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #10728a;
+    border-radius: 5px;
+}
+
 a {
     color: #82898f;
     text-decoration: none;
@@ -68,7 +78,7 @@ h1{
 h2{
     font-family: 'SF UI Display Bold';
     color: #82898f;
-    line-height: 2;
+    /* line-height: 2; */
 }
 
 .cover{
@@ -184,6 +194,19 @@ h2{
     position: sticky;
     top: 75px;
     font-size: .9rem;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.right-menu-sticky::-webkit-scrollbar{
+    width: 10px;
+    background-color: #1e2226;
+    border-radius: 0.3rem;
+}
+
+.right-menu-sticky::-webkit-scrollbar-thumb {
+    background-color: #10728a;
+    border-radius: 5px;
 }
 
 .menu-toggle a{

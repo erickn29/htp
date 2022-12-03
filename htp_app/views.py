@@ -40,7 +40,7 @@ class ArticleDetailView(DetailView):
 
 
 class InterviewListView(AllArticlesListView):
-    queryset = Article.objects.all().filter(category__name='Собеседование')
+    queryset = Article.objects.all().filter(category__name='interview')
 
 
 class DocumentationListView(AllArticlesListView):
