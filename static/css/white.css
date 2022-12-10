@@ -311,6 +311,7 @@ footer ul{
 pre {
     margin-top: 1rem !important;
     border-radius: 0.3rem;
+    position: relative;
 }
 
 .content > img {
@@ -383,4 +384,16 @@ pre {
 
 .article-item{
     margin-bottom: 40px;
+}
+
+.copy_text{
+    padding: 3px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    cursor: pointer;
+}
+
+.hljs{
+    background: #dfdfdf !important;
 }

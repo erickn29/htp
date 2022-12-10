@@ -325,6 +325,7 @@ footer ul{
 pre {
     margin-top: 1rem !important;
     border-radius: 0.3rem;
+    position: relative;
 }
 
 .content > img {
@@ -394,4 +395,20 @@ pre {
 
 .article-item{
     margin-bottom: 40px;
+}
+
+.copy_button{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.copy_text{
+    padding: 3px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    cursor: pointer;
 }
